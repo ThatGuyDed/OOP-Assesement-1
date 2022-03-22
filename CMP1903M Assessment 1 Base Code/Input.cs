@@ -23,6 +23,7 @@ namespace CMP1903M_Assessment_1_Base_Code
                 if (input.Length == 0)
                 {
                     input = " ";
+                    text+= input;
                 }
                 else
                 {
@@ -30,7 +31,7 @@ namespace CMP1903M_Assessment_1_Base_Code
                 }
                 
             }
-            return text.Replace("\n","").Replace("*","");
+            return text.Replace("\n"," ").Replace("*","");
         }
 
         //Method: fileTextInput
@@ -59,7 +60,7 @@ namespace CMP1903M_Assessment_1_Base_Code
                 Console.WriteLine("Unexepected error has occurred, make sure the input value was correct and try again.");
                 text = "";
             }
-            return text.Replace("\n", "");
+            return text.Replace("\n", " ");
         }
 
     }
