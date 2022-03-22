@@ -1,2 +1,2 @@
 # OOP-Assesement-1
-The Repository for all of my OOP Assessment 1 related files
+A program that can take any number of sentences and give information about them.
