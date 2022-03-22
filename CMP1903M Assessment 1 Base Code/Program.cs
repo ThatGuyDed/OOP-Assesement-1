@@ -13,9 +13,35 @@ namespace CMP1903M_Assessment_1_Base_Code
         {
             //Local list of integers to hold the first five measurements of the text
             List<int> parameters = new List<int>();
+            string choice = "";
+            string input = "";
+            string output = "";
 
             //Create 'Input' object
             //Get either manually entered text, or text from a file
+
+            do
+            {
+                Console.Write("Would you like to:\n1. Manually Enter text\n2. Take text from file\n");
+                choice = Console.ReadLine();
+            } while (choice != "1" && choice != "2");
+
+
+            if(choice == "1")
+            {
+                output = Input.manualTextInput();
+            }
+
+            else if (choice == "2")
+            {
+                do
+                {
+                    Console.Write("Please enter the path to the text file: ");
+                    input = Console.ReadLine();
+                    output = Input.fileTextInput(input);
+
+                } while (output == "");
+            }
 
 
             //Create an 'Analyse' object
@@ -30,7 +56,7 @@ namespace CMP1903M_Assessment_1_Base_Code
 
             //TO ADD: Get the frequency of individual letters?
 
-           
+
         }
         
         
