@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace CMP1903M_Assessment_1_Base_Code
 {
-    public static class Input
+    public class Input
     {
         //Handles the text input for Assessment 1
 
-        
         //Method: manualTextInput
         //Arguments: none
         //Returns: string
@@ -31,7 +30,7 @@ namespace CMP1903M_Assessment_1_Base_Code
                 }
                 
             }
-            return text;
+            return text.Replace("\n","").Replace("*","");
         }
 
         //Method: fileTextInput
@@ -60,7 +59,7 @@ namespace CMP1903M_Assessment_1_Base_Code
                 Console.WriteLine("Unexepected error has occurred, make sure the input value was correct and try again.");
                 text = "";
             }
-            return text;
+            return text.Replace("\n", "");
         }
 
     }
