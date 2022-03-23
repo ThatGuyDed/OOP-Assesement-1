@@ -16,7 +16,6 @@ namespace CMP1903M_Assessment_1_Base_Code
             string choice = "";
             string input = "";
             string output = "";
-
             //Create 'Input' object
             //Get either manually entered text, or text from a file
 
@@ -43,7 +42,11 @@ namespace CMP1903M_Assessment_1_Base_Code
                 } while (output == "");
             }
 
-
+            parameters = Analyse.analyseText(output);
+            foreach(int parameter in parameters)
+            {
+                Console.WriteLine(parameter);
+            }
             //Create an 'Analyse' object
             //Pass the text input to the 'analyseText' method
 

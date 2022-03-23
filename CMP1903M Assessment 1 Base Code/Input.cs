@@ -23,11 +23,10 @@ namespace CMP1903M_Assessment_1_Base_Code
                 if (input.Length == 0)
                 {
                     input = " ";
-                    text+= input;
                 }
                 else
                 {
-                    text += input;
+                    text += input + " ";
                 }
                 
             }
@@ -41,6 +40,7 @@ namespace CMP1903M_Assessment_1_Base_Code
         public static string fileTextInput(string fileName)
         {
             string text = "";
+            fileName = fileName.Trim('"');
             try
             {
                 text = System.IO.File.ReadAllText(fileName);
