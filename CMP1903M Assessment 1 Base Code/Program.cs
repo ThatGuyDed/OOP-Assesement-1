@@ -43,10 +43,7 @@ namespace CMP1903M_Assessment_1_Base_Code
             }
 
             parameters = Analyse.analyseText(output);
-            foreach(int parameter in parameters)
-            {
-                Console.WriteLine(parameter);
-            }
+            Report.reportValues(parameters);
             //Create an 'Analyse' object
             //Pass the text input to the 'analyseText' method
 
