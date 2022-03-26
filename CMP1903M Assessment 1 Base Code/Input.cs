@@ -22,7 +22,8 @@ namespace CMP1903M_Assessment_1_Base_Code
                 input = Console.ReadLine();
                 if (input.Length == 0)
                 {
-                    input = " ";
+                    input = ".";
+                    text += input;
                 }
                 else
                 {
