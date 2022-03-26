@@ -14,7 +14,7 @@ namespace CMP1903M_Assessment_1_Base_Code
         //Arguments: string
         //Returns: list of integers
         //Calculates and returns an analysis of the text
-        public static List<int> analyseText(string input)
+        public static List<int> analyseText(string input,ref List<int> letters)
         {
             //List of integers to hold the first five measurements:
             //1. Number of sentences
@@ -28,6 +28,10 @@ namespace CMP1903M_Assessment_1_Base_Code
             for(int i = 0; i<6; i++)
             {
                 values.Add(0);
+            }
+            for(int i = 0; i<26; i++)
+            {
+                letters.Add(0);
             }
 
             for(int i = 0; i<input.Length; i++)
@@ -53,10 +57,12 @@ namespace CMP1903M_Assessment_1_Base_Code
                 else if (characterChecker.IsVowel(input[i]))
                 {
                     values[1]++;
+                    letters[Char.ToLower(input[i]) - 97]++;
                 }
                 else if (characterChecker.IsConsonant(input[i]))
                 {
                     values[2]++;
+                    letters[Char.ToLower(input[i]) - 97]++;
                 }
                 if (Char.IsUpper(input[i]))
                 {

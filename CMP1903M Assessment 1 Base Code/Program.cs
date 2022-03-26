@@ -13,6 +13,7 @@ namespace CMP1903M_Assessment_1_Base_Code
         {
             //Local list of integers to hold the first five measurements of the text
             List<int> parameters = new List<int>();
+            List<int> letters = new List<int>();
             string choice = "";
             string input = "";
             string output = "";
@@ -42,8 +43,9 @@ namespace CMP1903M_Assessment_1_Base_Code
                 } while (output == "");
             }
 
-            parameters = Analyse.analyseText(output);
-            Report.reportValues(parameters);
+            parameters = Analyse.analyseText(output, ref letters);
+            Report.reportValues(parameters,letters);
+            WordLengthChecker.checkWords(output);
             //Create an 'Analyse' object
             //Pass the text input to the 'analyseText' method
 
