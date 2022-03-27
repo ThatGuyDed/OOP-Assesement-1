@@ -17,21 +17,20 @@ namespace CMP1903M_Assessment_1_Base_Code
             string choice = "";
             string input = "";
             string output = "";
-            //Create 'Input' object
-            //Get either manually entered text, or text from a file
-
+            // Check what choice user wants
             do
             {
                 Console.Write("Would you like to:\n1. Manually Enter text\n2. Take text from file\n");
                 choice = Console.ReadLine();
             } while (choice != "1" && choice != "2");
 
-
+            // Manual Input
             if(choice == "1")
             {
                 output = Input.manualTextInput();
             }
 
+            // Text file input
             else if (choice == "2")
             {
                 do
@@ -42,22 +41,12 @@ namespace CMP1903M_Assessment_1_Base_Code
 
                 } while (output == "");
             }
-
+            // Analyse string
             parameters = Analyse.analyseText(output, ref letters);
+            // Report results
             Report.reportValues(parameters,letters);
+            // Make list of long words
             WordLengthChecker.checkWords(output);
-            //Create an 'Analyse' object
-            //Pass the text input to the 'analyseText' method
-
-
-            //Receive a list of integers back
-
-
-            //Report the results of the analysis
-
-
-            //TO ADD: Get the frequency of individual letters?
-
 
         }
         

@@ -24,6 +24,7 @@ namespace CMP1903M_Assessment_1_Base_Code
             Console.WriteLine("\n\n Letter frequencies: ");
             for (int i = 0; i < letters.Count; i++)
             {
+                // Add back in the 97 previously subtracted to get the correct char
                 letter = (char)(i+97);
                 Console.WriteLine($"-{letter} had frequency: {letters[i]}");
             }

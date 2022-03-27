@@ -8,6 +8,7 @@ namespace CMP1903M_Assessment_1_Base_Code
 {
     class characterChecker
     {
+        // Declare private char strings for each thing we are checking for
         static char[] vowels = { 'a', 'e', 'i', 'o', 'u' };
         static char[] consonants = { 'b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z' };
         static char[] enders = { '!', '?', '.' };
