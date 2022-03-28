@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace CMP1903M_Assessment_1_Base_Code
 {
+    // Class made for methods involving checking characters
     class characterChecker
     {
         // Declare private char strings for each thing we are checking for

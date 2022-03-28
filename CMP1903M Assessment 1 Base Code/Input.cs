@@ -16,6 +16,7 @@ namespace CMP1903M_Assessment_1_Base_Code
         //Gets text input from the keyboard
         public static string manualTextInput()
         {
+            // Abstraction and encapsulation via private variables
             string text = "";
             string input = " ";
             while (input[input.Length - 1] != '*'){

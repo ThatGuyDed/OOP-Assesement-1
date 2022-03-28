@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace CMP1903M_Assessment_1_Base_Code
 {
+    // Class for word length checker
     class WordLengthChecker
     {
         // Takes a string and then finds all words of length 7 or higher
